@@ -1,0 +1,131 @@
+@media screen and (max-width: 1500px) {
+    html{
+        font-size: 57%;
+    }
+    .sub_icon_box{
+        width: 350px;
+    }
+    .sub_icon{
+        width: 60px;
+    }
+    .review_body{
+        height: 25vw;
+    }
+}
+@media screen and(max-width:1200px){
+    .f_L, .f_R{
+        padding: 10px;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 45%;
+    }
+    .nav{
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    .sub_pan span{
+        line-height: 35px;
+        font-size: 2rem;
+    }
+    .sub_list{
+        font-size: 1.7rem;
+    }
+    .my_mn_menu{
+        font-size: 1.7rem;
+    }
+    .sub_icon_box{
+        display: none;
+    }
+    .main_banner_box{
+        height: 50vw;
+    }
+    .celeb_body {
+        gap: 20px;
+    }
+    .cel_pick_item_box{
+        width: calc((100% - 20px) / 3);
+    }
+    .cel_pick_desc{
+        display: none;
+    }
+    .best_body{
+        height: 40vw;
+    }
+    .swiper_cate {
+        width: 23%;
+    }
+    .swiper {
+        padding-left: 23%;
+    }
+    .MD_pick_body {
+        gap: 10px;
+    }
+    .MD_pick_item_box {
+        width: calc((100% - (10px * 3))/ 4);
+    }
+    .f_L, .f_R{
+        padding: 20px;
+    }
+
+
+
+    /* 프로덕트 */
+    .product_body{
+        gap: 20px;
+    }
+    .product_item_box{
+        width: calc((100% - (20px * 2)) / 3);
+
+    }
+}
+@media screen and (max-width: 768px) {
+    html{
+        font-size: 45%;
+    }
+    .header{
+        height: 80px;
+    }
+    .header_1{
+        display: none;
+    }
+    .header_2{
+        display: block;
+    }
+    .h2_pan{
+        display: block;
+    }
+    #celeb_pick, .sec, #MD_pick {
+        margin-top: 40px;
+    }
+    .celeb_body {
+        gap: 0px;
+    }
+    .cel_pick_item_box{
+        width: calc((100%) / 3);
+    }
+    .cel_pick_title span{
+        display: none;
+    }
+    .best_body {
+        height: 60vw;
+    }
+    .MD_pick_item_box {
+        width: calc((100% - (10px * 1))/ 2);
+    }
+    .review_body {
+        height: 55vw;
+    }
+
+
+        /* 프로덕트 */
+        .product_body{
+            gap: 20px;
+        }
+        .product_item_box{
+            width: calc((100% - (20px)) / 2);
+    
+        }
+}

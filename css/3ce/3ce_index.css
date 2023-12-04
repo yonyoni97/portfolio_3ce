@@ -1,0 +1,429 @@
+/* 메인배너 */
+.main_banner_box{
+    width: 100%;
+    height: 40vw;
+    max-height: 680px;
+    min-height: 380px;
+    overflow: hidden;
+    position: relative;
+}
+.main_banner{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+#main_banner0{
+    background: #aa997f;
+}
+#main_banner1{
+    background: linear-gradient(to right, #01131d , #172e3c);
+}
+#main_banner3{
+    background: linear-gradient(to bottom, #feecec, #fffbfa);
+}
+
+.banner{
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ban_btn{
+    display: block;
+    width: 50px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: 9;
+
+    background: transparent;
+    text-align: center;
+    font-size: 5rem;
+    color: #fff;
+    border: none;
+}
+.ban_btn_L{
+    left: 0;
+}
+.ban_btn_R{
+    right: 0;
+}
+
+.indi{
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%);
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: #eee;
+    box-shadow: 0 0 5px 0 #bbb;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.circle_active{
+    width: 20px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+/* 섹션1, 셀럽픽 */
+.sec{
+    width: 100%;
+    margin-top: 80px;
+}
+#celeb_pick{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.sec_header{
+    width: 100%;
+    text-align: center;
+}
+#cel_pick_header,
+#best_item_header,
+#MD_pick_header,
+#review_header{
+    transform: translateX(-10%);
+    opacity: 0;
+    transition: transform 1s, opacity 1s; 
+}
+.sec_title{
+    font-size: 35px;
+    font-weight: 900;
+}
+.sec_desc{
+    font-size: 1.5rem;
+    line-height: 40px;
+    color: #777;
+}
+.sec_desc > span{
+    font-size: 1.7rem;
+}
+
+.sec_body{
+    width: 100%;
+    margin-top: 20px;
+}
+.celeb_body{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    overflow: hidden;
+}
+.cel_pick_item_box{
+    width: calc((100% - 50px) / 3);
+    aspect-ratio: 1/1;
+    /* text-align: center; */
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+
+    position: relative;
+}
+.cel_pick_item_box:nth-child(1),
+.cel_pick_item_box:nth-child(3){
+    transform: translateY(15%);
+    opacity: 0;
+}
+.cel_pick_item_box:nth-child(2){
+    transform: translateY(-15%);
+    opacity: 0;
+}
+.cel_pick_img{
+    /* width: 100%; */
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cel_pick_txt{
+    width: 100%;
+    height: 100%;
+    /* padding: 25% 0; */
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.3);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    color: #fff;
+    text-align: center;
+
+    opacity: 0;
+    transition: all 0.5s;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cel_pick_title{
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 40px;
+
+}
+.cel_pick_title span{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.cel_pick_desc{
+    /* margin-top: 7%; */
+    line-height: 25px;
+}
+.cel_pick_more_btn{
+    display: inline-block;
+    /* margin-top: 7%; */
+    padding: 5px 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: #fff;
+    color: #000;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.cel_pick_more_btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+/* 섹션2, 베스트 아이템 */
+.best_body{
+    /* border-top: 1px solid #777;
+    border-bottom: 1px solid #777; */
+    width: 100%;
+    height: 35vw;
+    transform: translateX(15%);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+    position: relative;
+}
+.swiper_cate{
+    width: 20%;
+    height: 100%;
+    max-height: 665px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+    font-size: 3.5rem;
+    font-weight: 900;
+    background-color: #fff;
+    box-shadow: 0 0 4px 0 #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.swiper_cate_title{
+    width: 100%;
+    height: 4vw;
+    padding: 3% 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+}
+.sw_cate_menu{
+    /* width: 100%; */
+    height: 4vw;
+    padding: 3% 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.sw_cate_menu::after{
+    content: "";
+    display: block;
+    width: 150%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #000;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: all 0.5s;
+    transform-origin: left;
+}
+.sw_cate_menu:hover::after{
+    transform: translateX(-50%) scale(1);
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    max-height: 665px;
+    padding-left: 20%;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/*섹션3, 엠디픽*/
+#MD_pick{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.MD_pick_body{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+.MD_pick_item_box{
+    width: calc((100% - (40px * 3))/ 4);
+    /* height: 30vw; */
+    transform: translateY(15%);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+.item_img{
+    width: 100%;
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+}
+.item_img:hover .img_menu{
+    top: calc(100% - 25px)
+}
+.item_img img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.item_sub_img{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.img_menu{
+    width: 55px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: top 0.5s;
+    display: flex;
+    justify-content: space-between;
+}
+.icon{
+    width: calc((100% - 5px) / 2);
+    height: 100%;
+    cursor: pointer;
+}
+.like_icon{
+    background: url(../../img/3ce/like_icon.png) no-repeat center / cover;
+}
+.cart_icon{
+    background: url(../../img/3ce/cart_icon.png) no-repeat center / cover;
+}
+.item_info{
+    padding: 20px;
+
+}
+.item_title{
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+.item_o_price{
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    color: #777;
+}
+.item_s_price{
+    font-size: 1.8rem;
+}
+
+/* 섹션4, 베스트 리뷰 */
+.review_body{
+    width: 100%;
+    height: 20vw;
+    position: relative;
+    transform: translateY(15%);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+.review_body .swiper{
+    padding: 0;
+}
+.reivew_item_box{
+    position: relative;
+}
+.review_info{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+.review_star{
+    padding: 30px 0;
+    font-size: 16px;
+}
+.review_txt{
+    width: 80%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+.reveiw_title{
+    padding: 5px 0;
+    font-weight: 900;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.reveiw_desc{
+    font-size: 1.3rem;
+    color: #777;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}

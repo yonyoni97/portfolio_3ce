@@ -1,0 +1,390 @@
+html{
+    font-size: 62.5%;
+    min-width: 760px;
+}
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* 탑배너 */
+.top_banner{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    background: #000;
+    text-align: center;
+    position: relative;
+}
+.top_banner>img{
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ////////////////////////////////////////////////// */
+
+/* 헤더 */
+.header{
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+    background: #fff;
+}
+.header_1{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h_left{
+    display: flex;
+    padding-left: 30px;
+}
+
+/* 로고 */
+.logo{
+    width: 90px;
+    height: 90px;
+    position: relative;
+}
+.logo_img{
+    /* width: 100%; */
+    height: 100%;
+}
+.logo_a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -999999px;
+}
+
+/* 헤더 네비게이션 */
+.nav{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+.nav_menu{
+    padding: 30px 15px;
+}
+
+.h_right{
+    display: flex;
+    padding-right: 30px;
+}
+/* 마이메뉴 */
+.my_menu{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.my_mn_menu{
+    padding: 30px 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #777;
+}
+
+/* 언어선택 */
+.lang{
+    display: flex;
+    align-items: center;
+}
+.sub_lang{
+    padding: 5px;
+}
+.search > svg,
+.language > svg{
+    width: 20px;
+    height: 20px;
+    fill: #777;
+}
+
+/* 서브 메뉴 */
+.sub_menu{
+    width: 100%;
+    height: 0;
+    /* height: 300px; */
+    transition: all 1s;
+    overflow: hidden;
+
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 9;
+}
+.sub_menu_active{
+    height: 300px;
+}
+.sub_pan{
+    width: 100%;
+    height: 100%;
+    padding: 15px 80px;
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+}
+.sub_pan_active{
+    display: flex;
+    /* justify-content: center; */
+    gap: 0 100px;
+}
+.sub_list_box{
+    margin: 0px 30px;
+}
+.sub_pan span{
+    line-height: 40px;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+.sub_list_area{
+    display: flex;
+}
+.sub_list{
+    line-height: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.sub_icon_box{
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.sub_icon{
+    width: 100px;
+    height: 130px;
+}
+.sub_icon0 img{
+    position: relative;
+    transform: rotate(180deg);
+}
+.sub_icon img{
+    width: 100%;
+}
+.icon_name{
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* 푸터 */
+.footer{
+    width: 100%;
+    height: 400px;
+    background: #ddd;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+}
+.inner_footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.f_L{
+    width: 70%;
+    padding: 50px;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+.about{
+    line-height: 30px;
+}
+.about_list,
+.about_list a,
+.f_R a{
+    padding: 3px 0;
+    white-space: nowrap;
+}
+.about_list:not(:last-child)::after{
+    content: "";
+    display: inline-block;
+    height: 17px;
+    width: 1px;
+    background-color: #000;
+    margin: 0 10px;
+    vertical-align: text-top;
+}
+.about_list:last-child{
+    line-height: 50px;
+    color: #000;
+}
+.about_list a:hover,
+.f_R a:hover{
+    border-bottom: 1px solid;
+}
+.f_R{
+    width: 30%;
+    padding: 50px;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    line-height: 30px;
+}
+.f_R_top_menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.f_R_bot_menu{
+    width: calc(100% / 3);
+}
+.f_R_bot_menu1{
+    text-align: right;
+    white-space: nowrap;
+}
+.frb_m1_list:nth-child(2){
+    font-weight: 700;
+    line-height: 40px;
+    color: #000;
+}
+.f_R_bot_menu2{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.frb_m2_list{
+    width: calc(40%);
+    height: 35px;
+    text-align: center;
+}
+
+.for_top{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+}
+.top_a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* 헤더2 */
+.header_2{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: none;
+
+}
+.header2_ham{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+}
+.ham{
+    width: 80%;
+    height: 5px;
+    margin: 0 auto;
+    background-color: #000;
+    transition: all 0.5s;
+}
+.h_2_logo{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+}
+.h_2_logo img{
+    width: 100%;
+}
+.header2_my_menu{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 50px;
+    text-align: center;
+}
+.my_page{
+    width: 100%;
+}
+.h2_pan{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    width: 300px;
+    height: 100vh;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 9999;
+    display: none;
+    background-color: #fff;
+}
+.h2_pan_active{
+    transform: translateX(0);
+}
+.h2_pan_menu{
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 900;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.h2_pan_list_box{
+    width: 100%;
+    height: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.h2_pan_list_box_active{
+    height: 180px;
+}
+.h2_pan_list{
+    padding: 5px 0;
+}
+
